@@ -147,7 +147,7 @@ class Utils {
         if (host == null) {
             installWrapper(NO_SUDO) {
                 shCommand, context=[:] ->
-                def = script.sh(script:shCommand, returnStatus:true)
+                def status = script.sh(script:shCommand, returnStatus:true)
 			 console.log("The command ${shCommand} return ${status}")
 
             }
